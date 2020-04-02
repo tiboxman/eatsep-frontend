@@ -1,26 +1,21 @@
-<mat-tab-group>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-      First
+<!-- <mat-tab-group>
+  <nav mat-tab-nav-bar *ngFor="let page of pages" >
+    <ng-template mat-tab-label >
+      <div ngClass="tab-label">
+        <mat-icon class="example-tab-icon">{{page.icon}}</mat-icon>
+        <span>{{page.tilte}}</span>
+      </div>
     </ng-template>
-    Content 1
-  </mat-tab>
+  </nav>
 
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-      Second
-    </ng-template>
-    Content 2
-  </mat-tab>
+</mat-tab-group> -->
 
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-      Third
-    </ng-template>
-
-    Content 3
-  </mat-tab>
-</mat-tab-group>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let link of pages" [routerLink]="link.link" fxLayout="column" fxFlex=33.33
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">
+  <mat-icon class="example-tab-icon">{{link.icon}}</mat-icon>
+  <span>{{link.tilte | uppercase}}</span>
+  </a>
+</nav>
+<router-outlet></router-outlet>

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'eatsep-frontend';
+  pages = [{tilte: 'recherche' , icon: 'search', link: './search' }, {tilte: 'profile' , icon: 'person', link: './profile' }, {tilte: 'chef' , icon: 'restaurant', link: './cook' }];
+
 }
