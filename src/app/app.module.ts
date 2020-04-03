@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { CookPageComponent } from './components/cook-page/cook-page.component';
+import { ListDishesComponent } from './components/search-page/list-dishes/list-dishes.component';
+import { CalendarComponent } from './components/search-page/calendar/calendar.component';
 
 
 
@@ -18,7 +20,9 @@ import { CookPageComponent } from './components/cook-page/cook-page.component';
     AppComponent,
     SearchPageComponent,
     ProfilePageComponent,
-    CookPageComponent
+    CookPageComponent,
+    ListDishesComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
