@@ -28,5 +28,59 @@ $eatsep-frontend-theme: mat-light-theme($eatsep-frontend-primary, $eatsep-fronte
 
 /* You can add global styles to this file, and also import other style files */
 
+$color-primary: #048B9A;
+$color-secondary: #AFAFAF;
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title1 {
+  font-size: 24px;
+  color: $color-primary;
+  font-weight: bold;
+}
+
+.title2 {
+  font-size: 15px;
+  color: $color-secondary;
+  font-weight: bold;
+}
+
+.title3 {
+  font-size: 15px;
+  color: $color-secondary;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.t {
+  justify-content: center;
+}
+
+.border {
+  border: 1px dashed black;
+}
