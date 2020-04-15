@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { CookPageComponent } from './components/cook-page/cook-page.component';
+import { SearchFilterComponent } from './search-filter/search-filter.component';
 
 
 
@@ -18,7 +19,8 @@ import { CookPageComponent } from './components/cook-page/cook-page.component';
     AppComponent,
     SearchPageComponent,
     ProfilePageComponent,
-    CookPageComponent
+    CookPageComponent,
+    SearchFilterComponent
   ],
   imports: [
     BrowserModule,
