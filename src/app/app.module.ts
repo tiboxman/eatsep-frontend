@@ -11,7 +11,9 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { CookPageComponent } from './components/cook-page/cook-page.component';
 import { ListDishesComponent } from './components/search-page/list-dishes/list-dishes.component';
+import { DishCardComponent } from './components/generique/dish-card/dish-card.component';
 import { CalendarComponent } from './components/search-page/calendar/calendar.component';
+import { SearchFilterComponent } from './components/search-page/search-filter/search-filter.component';
 
 
 
@@ -22,7 +24,9 @@ import { CalendarComponent } from './components/search-page/calendar/calendar.co
     ProfilePageComponent,
     CookPageComponent,
     ListDishesComponent,
-    CalendarComponent
+    DishCardComponent,
+    CalendarComponent,
+    SearchFilterComponent
   ],
   imports: [
     BrowserModule,

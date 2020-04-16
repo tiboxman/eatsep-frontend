@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CATEGORIES } from '../models/mock/categorie.mock';
+import { CATEGORIES } from '../../../models/mock/categorie.mock';
 
 @Component({
   selector: 'app-search-filter',
