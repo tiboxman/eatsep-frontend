@@ -105,8 +105,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
-.dispatcher {
+.dispatcher-around {
   justify-content: space-around;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.dispatcher-left {
+  justify-content: flex-start;
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
