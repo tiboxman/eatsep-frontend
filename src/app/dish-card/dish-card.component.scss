@@ -7,6 +7,9 @@
 }
 
 .cropped-img {
+    margin-top: 0;
+    position: absolute;
+    z-index: -1;
     width: 125px; /* width of container */
     height: 100px; /* height of container */
     object-fit: cover;
@@ -14,12 +17,13 @@
 }
 
 .dish-name {
+    //margin-top: 80px;
     padding: 4px;
 }
 
 .dish-price {
-    position: absolute;
-    z-index: 1;
+    //position: absolute;
+    //z-index: 1;
     text-align: center;
     border-radius: 5px 0 0 0;
     width: 50px;
