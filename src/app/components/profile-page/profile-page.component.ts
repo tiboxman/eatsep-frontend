@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { DishCardComponent } from '../generique/dish-card/dish-card.component';
+import { OrderInfoComponent } from './order-info/order-info.component';
+//import { DishCardComponent } from '../generique/dish-card/dish-card.component';
 
 @Component({
   selector: 'app-profile-page',
@@ -15,7 +16,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DishCardComponent, {
+    const dialogRef = this.dialog.open(OrderInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
       maxHeight: '800px',

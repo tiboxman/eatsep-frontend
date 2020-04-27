@@ -15,6 +15,7 @@ import { ListDishesComponent } from './components/search-page/list-dishes/list-d
 import { DishCardComponent } from './components/generique/dish-card/dish-card.component';
 import { CalendarComponent } from './components/search-page/calendar/calendar.component';
 import { SearchFilterComponent } from './components/search-page/search-filter/search-filter.component';
+import { OrderInfoComponent } from './components/profile-page/order-info/order-info.component';
 
 
 
@@ -27,7 +28,8 @@ import { SearchFilterComponent } from './components/search-page/search-filter/se
     ListDishesComponent,
     DishCardComponent,
     CalendarComponent,
-    SearchFilterComponent
+    SearchFilterComponent,
+    OrderInfoComponent
   ],
   imports: [
     BrowserModule,
