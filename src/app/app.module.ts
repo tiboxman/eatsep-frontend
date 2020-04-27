@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './components/search-page/search-page.component';
@@ -33,6 +34,7 @@ import { SearchFilterComponent } from './components/search-page/search-filter/se
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule, // './app-material/app-material.module'
+    MatDialogModule,
     FlexLayoutModule
   ],
   providers: [],
