@@ -7,6 +7,9 @@
   .container-cat {
     max-width: 400px;
   }
+  .label-cat {
+    font-size: 11px;
+  }
 }
 @media (min-width: 992px) {
   .icon-cat {
@@ -16,11 +19,15 @@
   .container-cat {
     max-width: 600px;
   }
+  .label-cat {
+    font-size: 13px;
+  }
 }
 
 .container-cat {
   margin-left: auto;
   margin-right: auto;
+  padding: 30px;
 }
 
 .categorie {
@@ -37,7 +44,7 @@
 //}
 
 .label-cat {
-  color: #D0D0D0;
-  font-weight: 200;
+  color: #7A7A7A;
+  font-weight: bold;
   padding-top: 5px;
 }
