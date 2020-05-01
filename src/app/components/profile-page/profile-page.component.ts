@@ -19,7 +19,7 @@ export class ProfilePageComponent implements OnInit {
     const dialogRef = this.dialog.open(OrderInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px',
+      maxHeight: '800px'
       //data: {id: _id}
     });
 
