@@ -12,12 +12,15 @@
 
 
 <router-outlet></router-outlet>
+<div ngClass="footer">
+  footer
+</div>
 <div ngClass="navbar">
   <nav mat-tab-nav-bar >
     <a mat-tab-link *ngFor="let link of pages" [routerLink]="link.link" fxLayout="column" fxFlex=33.33
     routerLinkActive #rla="routerLinkActive"
     [active]="rla.isActive">
-    <mat-icon class="example-tab-icon">{{link.icon}}</mat-icon>
+    <mat-icon>{{link.icon}}</mat-icon>
     <span ngClass="tab-label">{{link.tilte | uppercase}}</span>
     </a>
   </nav>

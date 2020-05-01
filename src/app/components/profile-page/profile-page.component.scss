@@ -1,11 +1,36 @@
 
+@media (min-width: 0px) {
+  .deconnexion {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .deconnexion {
+    width: 400px;
+  }
+}
+
 .icon-profile {
-  width: 10vw;
+  //width: 10vw;
   margin: auto;
 }
 
 .profile-name {
   text-align: center;
-  margin-top: 20px;
+  //margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.mat-icon {
+  font-size: 200px;
+  width: 200px;
+}
+
+.btn-deconnexion {
+  width: 100%;
+}
+
+.deconnexion {
+  margin: auto;
 }
