@@ -4,4 +4,15 @@
     <img *ngIf="!cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlFalse}}">
     <span ngClass="label-cat" >{{cat.label}}</span>
   </div>
+
+</div>
+
+<div ngClass="date-picker-container">
+  <div ngClass="date-arrow" (click)="previousDate()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </div>
+  <div ngClass="date-label">{{getDate()}}</div>
+  <div ngClass="date-arrow" (click)="nextDate()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
 </div>

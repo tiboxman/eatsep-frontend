@@ -10,6 +10,10 @@ export class SearchFilterComponent implements OnInit {
   allcat: boolean = false;
 
   categories = CATEGORIES;
+  currentDate = new Date();
+
+  days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+  month = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
 
   constructor() { }
 
@@ -30,6 +34,26 @@ export class SearchFilterComponent implements OnInit {
     for(let i = 0; i < this.categories.length; i++){
       this.categories[i].isActive = this.allcat;
     }
+  }
+
+  nextDate() {
+    console.log(this.currentDate);
+    this.currentDate.setDate(this.currentDate.getDate() + 1);
+    this.currentDate = this.currentDate;
+    console.log(this.currentDate);
+  }
+
+  previousDate() {
+    console.log(this.currentDate);
+    this.currentDate.setDate(this.currentDate.getDate() - 1);
+    this.currentDate = this.currentDate;
+    console.log(this.currentDate);
+  }
+
+  getDate() {
+    let str = '';
+    str += this.days[this.currentDate.getDay()] + ' ' + this.currentDate.getDate() + ' ' + this.month[this.currentDate.getMonth()];
+    return str;
   }
 
 }
