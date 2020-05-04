@@ -1,4 +1,16 @@
-<p>plan-dish works!</p>
+<p ngClass="title2">Planifier un plat</p>
+
+<mat-form-field appearance="outline">
+  <mat-label>plat</mat-label>
+  <mat-select>
+    <mat-option value="option">nom plat</mat-option>
+    <mat-option value="option">nom plat</mat-option>
+    <mat-option value="option">nom plat</mat-option>
+    <mat-option value="option">nom plat</mat-option>
+  </mat-select>
+  <mat-icon matSuffix>person_pin_circle</mat-icon>
+</mat-form-field>
+
 <mat-form-field appearance="outline">
   <mat-label>prix</mat-label>
   <input matInput>
@@ -6,26 +18,26 @@
 </mat-form-field>
 
 <mat-form-field appearance="outline">
-  <mat-label>lieux de rendez-vous</mat-label>
+  <mat-label>lieux</mat-label>
   <mat-select>
     <mat-option value="option">NDC</mat-option>
     <mat-option value="option">NDL</mat-option>
   </mat-select>
+  <mat-icon matSuffix>person_pin_circle</mat-icon>
 </mat-form-field>
-
-<mat-form-field appearance="outline">
-  <mat-label>Cars</mat-label>
-  <select matNativeControl required>
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </select>
-</mat-form-field>
-
+<!--
 <mat-form-field appearance="outline">
   <mat-label>date</mat-label>
   <input matInput [matDatepicker]="picker">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
+-->
+<mat-form-field appearance="outline">
+  <mat-label>heure</mat-label>
+  <input matInput>
+  <mat-icon matSuffix>query_builder</mat-icon>
+</mat-form-field>
+
+<button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-enregistrer">enregistrer</button>
+<button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>
