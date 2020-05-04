@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   pages = [{tilte: 'recherche' , icon: 'search', link: './search' }, {tilte: 'profile' , icon: 'person', link: './profile' }, {tilte: 'chef' , icon: 'restaurant', link: './cook' }];
 
+  scrollTop(event) {
+      window.scroll(0,0);
+  }
+
 }

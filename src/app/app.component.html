@@ -15,7 +15,7 @@
 <div ngClass="footer">
   footer
 </div>
-<div ngClass="navbar">
+<div ngClass="navbar" (click)="scrollTop($event)">
   <nav mat-tab-nav-bar >
     <a mat-tab-link *ngFor="let link of pages" [routerLink]="link.link" fxLayout="column" fxFlex=33.33
     routerLinkActive #rla="routerLinkActive"
