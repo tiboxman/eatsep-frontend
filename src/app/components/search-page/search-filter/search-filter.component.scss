@@ -15,7 +15,7 @@
 }
 
 .date-label {
-  width: 150px;
+  width: 250px;
   text-align: center;
 }
 
@@ -28,9 +28,16 @@
 .categorie {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
+  // border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 25%;
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.1);
+
 }
 
 //.icon-cat {

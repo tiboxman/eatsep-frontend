@@ -22,11 +22,7 @@ export class SearchFilterComponent implements OnInit {
 
   toggleIcon(cat: any) {
     const index = this.categories.indexOf(cat);
-    if (index === 0) {
-      this.toggleAllIcon();
-    } else {
-      this.categories[index].isActive = !this.categories[index].isActive;
-    }
+    this.categories[index].isActive = !this.categories[index].isActive;
   }
 
   toggleAllIcon() {
@@ -37,17 +33,19 @@ export class SearchFilterComponent implements OnInit {
   }
 
   nextDate() {
-    console.log(this.currentDate);
-    this.currentDate.setDate(this.currentDate.getDate() + 1);
-    this.currentDate = this.currentDate;
-    console.log(this.currentDate);
+    if (this.currentDate.getDay() + 1 === 5) {
+      this.currentDate.setDate(this.currentDate.getDate() + 3);
+    } else  {
+      this.currentDate.setDate(this.currentDate.getDate() + 1);
+    }
   }
 
   previousDate() {
-    console.log(this.currentDate);
-    this.currentDate.setDate(this.currentDate.getDate() - 1);
-    this.currentDate = this.currentDate;
-    console.log(this.currentDate);
+    if (this.currentDate.getDay() - 1 === -1) {
+      this.currentDate.setDate(this.currentDate.getDate() - 3);
+    } else  {
+      this.currentDate.setDate(this.currentDate.getDate() - 1);
+    }
   }
 
   getDate() {

@@ -1,10 +1,6 @@
 import { Categorie } from '../categorie.model';
 
 export const CATEGORIES: Categorie[] = [
-  {label: 'Tout',
-   isActive: false,
-   srcUrlFalse: '../../../../assets/icons_dishes_filter/all_cat_false.png',
-   srcUrlTrue: '../../../../assets/icons_dishes_filter/all_cat_true.png'},
   {label: 'Viande',
    isActive: false,
    srcUrlFalse: '../../../../assets/icons_dishes_filter/meat_false.png',
