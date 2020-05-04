@@ -1,16 +1,17 @@
 
-.icon-profile {
+.icon-cook {
   //width: 10vw;
   margin: auto;
+  padding-top: 20px;
+}
+
+.icon-cook mat-icon {
+  font-size: 200px;
+  width: 200px;
 }
 
 .profile-name {
   text-align: center;
   //margin-top: 20px;
   margin-bottom: 30px;
-}
-
-.mat-icon {
-  font-size: 200px;
-  width: 200px;
 }

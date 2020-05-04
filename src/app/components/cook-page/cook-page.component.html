@@ -1,10 +1,18 @@
 
 <div ngClass="column">
   <!--<img ngClass="icon-profile" src="../../../assets/icons_menu_bar/profile.png"/>-->
-  <div ngClass="icon-profile title3">
+  <div ngClass="icon-cook title3">
     <mat-icon>restaurant</mat-icon>
   </div>
-  <div ngClass="title1 profile-name">Guillaume ROUAIX <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon></div>
+  <div ngClass="title1 profile-name column">
+    Guillaume ROUAIX
+    <div ngClass="">
+      <mat-icon>star</mat-icon>
+      <mat-icon>star</mat-icon>
+      <mat-icon>star</mat-icon>
+      <mat-icon>star_border</mat-icon>
+    </div>
+  </div>
 </div>
 <div ngClass="container">
   <span ngClass="title2">Plats planifiés :</span>
@@ -15,7 +23,7 @@
   </div>
 </div>
 <div ngClass="container">
-  <span ngClass="title2">Recettes :</span>
+  <span ngClass="title2">Plats enregistrés :</span>
   <div ngClass="title3  dispatcher-left">
     <app-dish-card (click)="openDialog()"></app-dish-card>
     <app-dish-card></app-dish-card>
