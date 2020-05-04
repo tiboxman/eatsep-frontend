@@ -17,17 +17,17 @@
 <div ngClass="container">
   <span ngClass="title2">Plats planifiés :</span>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="openDialog()"></app-dish-card>
     <app-dish-card></app-dish-card>
-    <app-add-dish-card></app-add-dish-card>
+    <app-dish-card></app-dish-card>
+    <app-add-dish-card (click)="PlanDish()"></app-add-dish-card>
   </div>
 </div>
 <div ngClass="container">
-  <span ngClass="title2">Plats enregistrés :</span>
+  <span ngClass="title2">Plats créés :</span>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="openDialog()"></app-dish-card>
     <app-dish-card></app-dish-card>
     <app-dish-card></app-dish-card>
-    <app-add-dish-card></app-add-dish-card>
+    <app-dish-card></app-dish-card>
+    <app-add-dish-card (click)="createDish()"></app-add-dish-card>
   </div>
 </div>

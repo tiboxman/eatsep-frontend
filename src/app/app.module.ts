@@ -17,6 +17,8 @@ import { CalendarComponent } from './components/search-page/calendar/calendar.co
 import { SearchFilterComponent } from './components/search-page/search-filter/search-filter.component';
 import { OrderInfoComponent } from './components/profile-page/order-info/order-info.component';
 import { AddDishCardComponent } from './components/cook-page/add-dish-card/add-dish-card.component';
+import { CreateDishComponent } from './components/cook-page/create-dish/create-dish.component';
+import { PlanDishComponent } from './components/cook-page/plan-dish/plan-dish.component';
 
 
 
@@ -31,7 +33,9 @@ import { AddDishCardComponent } from './components/cook-page/add-dish-card/add-d
     CalendarComponent,
     SearchFilterComponent,
     OrderInfoComponent,
-    AddDishCardComponent
+    AddDishCardComponent,
+    CreateDishComponent,
+    PlanDishComponent
   ],
   imports: [
     BrowserModule,

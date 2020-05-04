@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-//import { OrderInfoComponent } from './order-info/order-info.component';
+import { CreateDishComponent } from './create-dish/create-dish.component';
+import { PlanDishComponent } from './plan-dish/plan-dish.component';
 
 @Component({
   selector: 'app-cook-page',
@@ -13,9 +14,9 @@ export class CookPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-/*
-  openDialog(): void {
-    const dialogRef = this.dialog.open(OrderInfoComponent, {
+
+  createDish(): void {
+    const dialogRef = this.dialog.open(CreateDishComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
       maxHeight: '800px'
@@ -26,5 +27,18 @@ export class CookPageComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
-*/
+
+    PlanDish(): void {
+      const dialogRef = this.dialog.open(PlanDishComponent, {
+  	  hasBackdrop: true,
+        maxWidth: '800px',
+        maxHeight: '800px'
+        //data: {id: _id}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
+    }
+
 }
