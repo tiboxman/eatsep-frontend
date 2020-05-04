@@ -19,6 +19,8 @@ import { OrderInfoComponent } from './components/profile-page/order-info/order-i
 import { AddDishCardComponent } from './components/cook-page/add-dish-card/add-dish-card.component';
 import { CreateDishComponent } from './components/cook-page/create-dish/create-dish.component';
 import { PlanDishComponent } from './components/cook-page/plan-dish/plan-dish.component';
+import { PlanDishInfoComponent } from './components/cook-page/plan-dish-info/plan-dish-info.component';
+import { CreateDishInfoComponent } from './components/cook-page/create-dish-info/create-dish-info.component';
 
 
 
@@ -35,7 +37,9 @@ import { PlanDishComponent } from './components/cook-page/plan-dish/plan-dish.co
     OrderInfoComponent,
     AddDishCardComponent,
     CreateDishComponent,
-    PlanDishComponent
+    PlanDishComponent,
+    PlanDishInfoComponent,
+    CreateDishInfoComponent
   ],
   imports: [
     BrowserModule,
