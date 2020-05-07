@@ -1,3 +1,4 @@
+import { DishService } from './../../services/dish-service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dishService: DishService) {
+      this.dishService.getDishes().subscribe((res) => {
+        console.log(res);
+      })
+   }
 
   ngOnInit(): void {
   }
