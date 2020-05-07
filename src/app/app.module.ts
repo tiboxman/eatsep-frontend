@@ -1,4 +1,3 @@
-import { DishService } from './services/dish-service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -20,7 +19,9 @@ import { OrderInfoComponent } from './components/profile-page/order-info/order-i
 import { AddDishCardComponent } from './components/cook-page/add-dish-card/add-dish-card.component';
 import { CreateDishComponent } from './components/cook-page/create-dish/create-dish.component';
 import { PlanDishComponent } from './components/cook-page/plan-dish/plan-dish.component';
-import { HttpClientModule } from '@angular/common/http';
+import { PlanDishInfoComponent } from './components/cook-page/plan-dish-info/plan-dish-info.component';
+import { CreateDishInfoComponent } from './components/cook-page/create-dish-info/create-dish-info.component';
+
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddDishCardComponent,
     CreateDishComponent,
     PlanDishComponent,
-
+    PlanDishInfoComponent,
+    CreateDishInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +47,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AppMaterialModule, // './app-material/app-material.module'
     MatDialogModule,
-    FlexLayoutModule,
-    HttpClientModule
+    FlexLayoutModule
   ],
-  providers: [DishService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
