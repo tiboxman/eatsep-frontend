@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { CreateDishComponent } from './components/cook-page/create-dish/create-d
 import { PlanDishComponent } from './components/cook-page/plan-dish/plan-dish.component';
 import { PlanDishInfoComponent } from './components/cook-page/plan-dish-info/plan-dish-info.component';
 import { CreateDishInfoComponent } from './components/cook-page/create-dish-info/create-dish-info.component';
+
+import { DishService } from './services/dish-service';
 
 
 
@@ -47,9 +50,10 @@ import { CreateDishInfoComponent } from './components/cook-page/create-dish-info
     BrowserAnimationsModule,
     AppMaterialModule, // './app-material/app-material.module'
     MatDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
