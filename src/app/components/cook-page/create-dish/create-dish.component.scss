@@ -35,3 +35,56 @@
     width: 45%;
     float: right;
 }
+
+@import '../../../../styles.scss';
+
+
+.icon-cat {
+    width: 30px;
+    height: 30px;
+}
+
+.container-cat {
+  max-width: 600px;
+}
+
+.label-cat {
+  font-size: 11px;
+}
+
+.date-label {
+  width: 250px;
+  text-align: center;
+}
+
+.container-cat {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+.categorie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  // border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 25%;
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.1);
+
+}
+
+//.icon-cat {
+//  width: 90px;
+//  height: 90px;
+//}
+
+.label-cat {
+  color: #7A7A7A;
+  font-weight: bold;
+  padding-top: 5px;
+}
