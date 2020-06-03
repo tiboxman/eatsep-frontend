@@ -1,7 +1,11 @@
 <p ngClass="title2">Créer un plat</p>
+<label for="file" ngClass="camera-card">
 <div ngClass="camera-card">
   <img ngClass="icon-camera" src="../assets/photo_camera.png"/>
 </div>
+</label>
+
+<input id="file" class="input-file" type="file">
 <div ngClass="dispatcher-around container-cat">
   <div ngClass="categorie" *ngFor="let cat of categories" (click)="this.toggleIcon(cat)">
     <img *ngIf="cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlTrue}}">

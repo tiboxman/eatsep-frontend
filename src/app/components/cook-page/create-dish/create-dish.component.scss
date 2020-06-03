@@ -1,4 +1,10 @@
 
+@import '../../../../styles.scss';
+
+.input-file {
+    display: none;
+}
+
 .bt-enregistrer {
     width: 45%;
 }
@@ -27,6 +33,10 @@
     width: 100%;
 }
 
+.ingredients textarea{
+    height: 75px;
+}
+
 .bt-enregistrer {
     width: 45%;
 }
@@ -35,9 +45,6 @@
     width: 45%;
     float: right;
 }
-
-@import '../../../../styles.scss';
-
 
 .icon-cat {
     width: 30px;
