@@ -1,3 +1,4 @@
+import { Plat } from './../models/plat.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -12,17 +13,17 @@ export class DishService {
       // .map(res => res.json());
   }
 
-  createDish(todo) {
-    return this.http.post(environment.api + '/dish', todo)
+  createDish(dish) {
+    return this.http.post(environment.api + '/dishes', dish)
       // .map(res => res.json());
   }
 
   updateDish(todo) {
-    return this.http.put(environment.api + '/dish', todo)
+    return this.http.put(environment.api + '/dishes', todo)
       // .map(res => res.json());
   }
 
   deleteDish(todo) {
-    return this.http.delete(environment.api + '/dish/' + todo.id);
+    return this.http.delete(environment.api + '/dishes/' + todo.id);
   }
 }

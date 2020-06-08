@@ -1,3 +1,5 @@
+import { Plat } from './../../../models/plat.model';
+import { DishService } from './../../../services/dish-service';
 import { Component, OnInit } from '@angular/core';
 import { CATEGORIES } from '../../../models/mock/categorie.mock';
 
@@ -10,7 +12,7 @@ export class CreateDishComponent implements OnInit {
   allcat: boolean = false;
 
   categories = CATEGORIES;
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +27,22 @@ export class CreateDishComponent implements OnInit {
     for(let i = 0; i < this.categories.length; i++){
       this.categories[i].isActive = this.allcat;
     }
+  }
+
+  saveDish() {
+    const dish = {
+      "title": "APITEST",
+      "description": "test descr",
+      "images": [],
+      "ingredients": "test",
+      "keywords": ["test1", "test2"],
+      "categories": ["test1", "test2"],
+      "user": "5ede46f561cccf17cc0afa8f",
+      "prix": 10
+    };
+    this.dishService.createDish(dish).subscribe(res => {
+      console.log(res);
+    })
   }
 
 }
