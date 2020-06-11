@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { ValidateReservationComponent } from './validate-reservation/validate-reservation.component';
 import { CreateDishInfoComponent } from './create-dish-info/create-dish-info.component';
 import { CreateDishComponent } from './create-dish/create-dish.component';
 import { PlanDishInfoComponent } from './plan-dish-info/plan-dish-info.component';
@@ -15,6 +16,19 @@ export class CookPageComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  validateReservation(): void {
+    const dialogRef = this.dialog.open(ValidateReservationComponent, {
+	  hasBackdrop: true,
+      maxWidth: '800px',
+      maxHeight: '800px'
+      //data: {id: _id}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   createDishInfo(): void {

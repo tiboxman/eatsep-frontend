@@ -14,6 +14,12 @@
   </div>
 </div>
 <div ngClass="container">
+  <span ngClass="title2">Réservations :</span>
+  <div ngClass="title3  dispatcher-left">
+    <app-validate-reservation-card (click)="validateReservation()"></app-validate-reservation-card>
+  </div>
+</div>
+<div ngClass="container">
   <span ngClass="title2">Plats planifiés :</span>
   <div ngClass="title3  dispatcher-left">
     <app-dish-card (click)="PlanDishInfo()"></app-dish-card>
