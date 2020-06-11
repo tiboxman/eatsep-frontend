@@ -24,15 +24,14 @@
 <!--
 <mat-form-field appearance="outline">
   <mat-label>date</mat-label>
-  <input matInput [matDatepicker]="picker">
+  <input matInput [matDatepicker]="picker"  type="datetime-local">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 -->
 <mat-form-field appearance="outline" ngClass="input">
   <mat-label>date / heure</mat-label>
-  <input matInput type="time">
-  <mat-icon matSuffix>query_builder</mat-icon>
+  <input matInput type="datetime-local">
 </mat-form-field>
 
 </div>
