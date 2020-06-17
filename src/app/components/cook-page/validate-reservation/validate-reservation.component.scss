@@ -1,0 +1,44 @@
+ @import '../../../../styles.scss';
+
+@media (min-width: 0px) {
+  .cropped-img {
+    height: 150px;
+  }
+  .dialogue {
+    width: 250px;
+  }
+}
+
+@media (min-width: 700px) {
+  .cropped-img {
+    height: 300px;
+  }
+  .dialogue {
+    width: 500px;
+  }
+}
+
+.icon {
+  font-size: 129px;
+  width: 129px;
+  height: 129px;
+}
+
+.bt-enregistrer {
+    width: 45%;
+}
+
+.bt-return {
+    width: 45%;
+    float: right;
+}
+
+.details {
+    margin: 15px;
+}
+
+.icon-container {
+    margin: auto;
+    width: 125px;
+    height: 125px;
+}

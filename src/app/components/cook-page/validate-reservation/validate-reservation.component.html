@@ -1,1 +1,20 @@
-<p>validate-reservation works!</p>
+<div ngClass="dialogue">
+  <div ngClass="icon-container column">
+  <mat-icon ngClass="icon title3">person</mat-icon>
+  </div>
+<div ngClass="title2">
+   Adrien LAMBEL
+</div>
+<div ngClass="title3 details">
+   nom plat : nom plat
+   <br>
+   date : 01/05/2021 13h
+   <br>
+   lieux : NDC
+   <br>
+   prix : 5$
+</div>
+
+<button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-enregistrer" (click)='saveDish()'>valider</button>
+<button  mat-raised-button mat-dialog-close color="warn" ngClass="bt-return">refuser</button>
+</div>
