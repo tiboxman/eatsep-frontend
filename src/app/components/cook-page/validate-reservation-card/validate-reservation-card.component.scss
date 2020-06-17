@@ -10,7 +10,23 @@
 }
 
 .icon {
-  font-size: 129px;
-  width: 129px;
-  height: 129px;
+    font-size: 129px;
+    width: 129px;
+    height: 129px;
+}
+
+.client-name {
+    padding: 4px;
+}
+
+.icon-container {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-container mat-icon {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
 }

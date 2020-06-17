@@ -52,6 +52,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: $color-secondary;
 }
 
+.overflow-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .column {
   display: flex;
   flex-direction: column;
