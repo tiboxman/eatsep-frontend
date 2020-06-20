@@ -1,3 +1,4 @@
+@import '../../../styles.scss';
 
 @media (min-width: 0px) {
   .deconnexion {
@@ -11,26 +12,51 @@
   }
 }
 
+
+.profil-info {
+  background-color: $color-primary;
+  // border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+}
+
+
 .icon-profile {
   margin: auto;
+  color: white;
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .profile-name {
   text-align: center;
-  margin-bottom: 30px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.mat-icon {
-  font-size: 200px;
-  width: 200px;
-  height: 200px;
+.labelOrder {
+  margin: 20px;
 }
 
 .btn-deconnexion {
-  width: 100%;
+  padding: 0 15px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+
 }
 
 .deconnexion {
-  margin: auto;
-  padding-top: 30px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 
-<div ngClass="column">
+<div ngClass="column profil-info">
   <div ngClass="icon-cook title3">
     <mat-icon>restaurant</mat-icon>
   </div>
@@ -13,14 +13,15 @@
     </div>
   </div>
 </div>
+
 <div ngClass="container">
-  <span ngClass="title2">Demande de réservations :</span>
+  <div ngClass="title2 labelOrder">Demande de réservations :</div>
   <div ngClass="title3  dispatcher-left">
     <app-validate-reservation-card (click)="validateReservation()"></app-validate-reservation-card>
   </div>
 </div>
 <div ngClass="container">
-  <span ngClass="title2">Plats planifiés :</span>
+  <div ngClass="title2 labelOrder">Plats planifiés :</div>
   <div ngClass="title3  dispatcher-left">
     <app-dish-card (click)="PlanDishInfo()"></app-dish-card>
     <app-dish-card (click)="PlanDishInfo()"></app-dish-card>
@@ -28,7 +29,7 @@
   </div>
 </div>
 <div ngClass="container">
-  <span ngClass="title2">Plats créés :</span>
+  <div ngClass="title2 labelOrder">Plats créés :</div>
   <div ngClass="title3  dispatcher-left">
     <app-dish-card (click)="createDishInfo()"></app-dish-card>
     <app-dish-card (click)="createDishInfo()"></app-dish-card>

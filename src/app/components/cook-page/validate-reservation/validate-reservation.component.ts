@@ -12,4 +12,7 @@ export class ValidateReservationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveDish() {
+
+  }
 }

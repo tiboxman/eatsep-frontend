@@ -6,13 +6,18 @@
     height: 30px;
 }
 
-.container-cat {
-  max-width: 600px;
-}
-
 .label-cat {
+  color: #00524B;
+  font-weight: bold;
+  padding-top: 5px;
   font-size: 11px;
 }
+
+.activelabel {
+  color: white;
+}
+
+
 
 .date-label {
   width: 250px;
@@ -23,6 +28,10 @@
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+  max-width: 600px;
+  background-color: $color-primary;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 15px 10px rgba(0,0,0,0.3);
 }
 
 .categorie {
@@ -36,7 +45,10 @@
   height: 60px;
   margin: 10px;
   border-radius: 25%;
-  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.4);
+  background-color: rgba(255, 255, 255 ,0.1);
+  transition: 200ms ease;
+
 
 }
 
@@ -45,16 +57,13 @@
 //  height: 90px;
 //}
 
-.label-cat {
-  color: #7A7A7A;
-  font-weight: bold;
-  padding-top: 5px;
-}
+
 
 .date-picker-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px;
 }
 
 .date-arrow {
@@ -68,4 +77,9 @@
   color: white;
   margin: 0 15px;
   cursor: pointer;
+}
+
+.activecat {
+  box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.2);
 }

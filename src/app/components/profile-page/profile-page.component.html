@@ -1,29 +1,24 @@
-<div ngClass="column">
-  <div ngClass="icon-profile title3">
-    <mat-icon>person</mat-icon>
+<div ngClass="column profil-info">
+  <div ngClass="title3">
+    <mat-icon ngClass="icon-profile">person</mat-icon>
   </div>
-  <div ngClass="title1 profile-name">Guillaume ROUAIX</div>
+  <div ngClass="title1 profile-name">
+      <span>Guillaume ROUAIX</span>
+      <span>guillaume.rouaix@isep.fr</span>
+      <span>06 63 89 65 82</span>
+  </div>
+
+    <div ngClass="deconnexion">
+      <button mat-flat-button ngClass="btn-deconnexion">Déconnexion</button>
+    </div>
+
 </div>
 <div ngClass="container">
-  <span ngClass="title2">Commandes :</span>
+  <div ngClass="title2 labelOrder">Commandes :</div>
   <div ngClass="title3  dispatcher-left">
     <app-dish-card (click)="openDialog()"></app-dish-card>
     <app-dish-card></app-dish-card>
     <app-dish-card></app-dish-card>
   </div>
 </div>
-<div ngClass="container">
-  <span ngClass="title2">Informations :</span>
-  <div ngClass="title3 container">
-    nom : guillaume
-    <br>
-    prénom : rouaix
-    <br>
-    email : guillaume.rouaix@isep.fr
-    <br>
-    tel : 06 63 89 65 82
-  </div>
-  <div ngClass="deconnexion">
-    <button mat-flat-button color="warn" ngClass="btn-deconnexion">déconnexion</button>
-  </div>
-</div>
+
