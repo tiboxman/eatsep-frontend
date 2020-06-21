@@ -1,8 +1,10 @@
-<div ngClass="dispatcher-around container-cat">
-  <div ngClass="" *ngFor="let cat of categories" [ngClass]="{'categorie' : true, 'activecat': cat.isActive }" (click)="this.toggleIcon(cat)">
-    <img *ngIf="cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlTrue}}">
-    <img *ngIf="!cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlFalse}}">
-    <div [ngClass]="{'label-cat' : true, 'activelabel': cat.isActive }" >{{cat.label}}</div>
+<div ngClass="profil-info">
+  <div ngClass="dispatcher-around container-cat">
+    <div ngClass="" *ngFor="let cat of categories" [ngClass]="{'categorie' : true, 'activecat': cat.isActive }" (click)="this.toggleIcon(cat)">
+      <img *ngIf="cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlTrue}}">
+      <img *ngIf="!cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlFalse}}">
+      <div [ngClass]="{'label-cat' : true, 'activelabel': cat.isActive }" >{{cat.label}}</div>
+    </div>
   </div>
 
 </div>
