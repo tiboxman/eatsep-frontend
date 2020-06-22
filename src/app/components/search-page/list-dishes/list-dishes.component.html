@@ -1,19 +1,11 @@
 
 <div  class="dish-list">
 
-  <mat-card class="dish-card" *ngFor="let item of ['', '', '', '', '', '', '']" >
-    <mat-card-header>
-      <div mat-card-avatar class="header-image">
-      </div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
+  <mat-card class="dish-card" *ngFor="let item of ['', '', '', '', '', '', '']" (click)='OrderDis()'>
     <img mat-card-image src="../../../../assets/example_dishes/dishes3.png" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small
-      </p>
+      <div ngClass="title4 overflow-text">Nom plat</div>
+      <div ngClass="title3 overflow-text">5$</div>
     </mat-card-content>
     <!-- <mat-card-actions fxFlexAlign="end">
       <button mat-button>LIKE</button>

@@ -53,6 +53,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: $color-secondary;
 }
 
+.title4 {
+  font-weight: bold;
+  font-size: 15px;
+  color: $color-secondary;
+}
+
 .overflow-text {
     white-space: nowrap;
     overflow: hidden;

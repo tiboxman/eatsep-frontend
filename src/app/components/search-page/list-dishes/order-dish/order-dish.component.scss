@@ -1,0 +1,37 @@
+
+@media (min-width: 0px) {
+  .cropped-img {
+    height: 150px;
+  }
+  .dialogue {
+    width: 250px;
+  }
+}
+
+@media (min-width: 700px) {
+  .cropped-img {
+    height: 300px;
+  }
+  .dialogue {
+    width: 500px;
+  }
+}
+
+.cropped-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.details {
+    margin: 15px;
+}
+
+.bt-order {
+    width: 45%;
+}
+
+.bt-return {
+    width: 45%;
+    float: right;
+}

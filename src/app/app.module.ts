@@ -24,6 +24,7 @@ import { PlanDishInfoComponent } from './components/cook-page/plan-dish-info/pla
 import { CreateDishInfoComponent } from './components/cook-page/create-dish-info/create-dish-info.component';
 import { ValidateReservationCardComponent } from './components/cook-page/validate-reservation-card/validate-reservation-card.component';
 import { ValidateReservationComponent } from './components/cook-page/validate-reservation/validate-reservation.component';
+import { OrderDishComponent } from './components/search-page/list-dishes/order-dish/order-dish.component';
 
 import { DishService } from './services/dish-service';
 
@@ -46,7 +47,8 @@ import { DishService } from './services/dish-service';
     PlanDishInfoComponent,
     CreateDishInfoComponent,
     ValidateReservationCardComponent,
-    ValidateReservationComponent
+    ValidateReservationComponent,
+    OrderDishComponent
   ],
   imports: [
     BrowserModule,

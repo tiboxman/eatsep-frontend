@@ -23,17 +23,14 @@
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Plats planifiés :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="PlanDishInfo()"></app-dish-card>
-    <app-dish-card (click)="PlanDishInfo()"></app-dish-card>
+    <app-dish-card (click)="PlanDishInfo()" *ngFor="let item of ['', '', '']" ></app-dish-card>
     <app-add-dish-card (click)="PlanDish()"></app-add-dish-card>
   </div>
 </div>
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Plats créés :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="createDishInfo()"></app-dish-card>
-    <app-dish-card (click)="createDishInfo()"></app-dish-card>
-    <app-dish-card (click)="createDishInfo()"></app-dish-card>
+    <app-dish-card (click)="createDishInfo()" *ngFor="let item of ['', '', '', '', '', '', '']" ></app-dish-card>
     <app-add-dish-card (click)="createDish()"></app-add-dish-card>
   </div>
 </div>
