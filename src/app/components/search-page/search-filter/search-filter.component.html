@@ -1,4 +1,5 @@
-<div ngClass="profil-info">
+<div ngClass="profil-info column">
+  <img src="../../../../assets/logoEatsep.png" ngClass="logoEatsep">
   <div ngClass="dispatcher-around container-cat">
     <div ngClass="" *ngFor="let cat of categories" [ngClass]="{'categorie' : true, 'activecat': cat.isActive }" (click)="this.toggleIcon(cat)">
       <img *ngIf="cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlTrue}}">

@@ -65,6 +65,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     text-overflow: ellipsis;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .column {
   display: flex;
   flex-direction: column;
