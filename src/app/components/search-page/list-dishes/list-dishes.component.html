@@ -1,16 +1,27 @@
 
 <div  class="dish-list">
 
-  <mat-card class="dish-card" *ngFor="let item of ['', '', '', '', '', '', '']" (click)='OrderDis()'>
-    <img mat-card-image src="../../../../assets/example_dishes/dishes3.png" alt="Photo of a Shiba Inu">
+  <mat-card class="dish-card" *ngFor="let d of dishes" (click)='OrderDis(d)'>
+    <img mat-card-image ngClass="dish-img" src="dish../../../../assets/example_dishes/dishes3.png" >
     <mat-card-content>
-      <div ngClass="title4 overflow-text">Nom plat</div>
-      <div ngClass="title3 overflow-text">5$</div>
+      <div ngClass="title4 overflow-text">{{d.title}}</div>
+      <div ngClass="title3 overflow-text">{{d.prix}}€</div>
     </mat-card-content>
     <!-- <mat-card-actions fxFlexAlign="end">
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
     </mat-card-actions> -->
   </mat-card>
+  <!-- <mat-card class="dish-card" *ngFor="let d of ['', '', '', '']" (click)='OrderDis()'>
+    <img mat-card-image src="dish../../../../assets/example_dishes/dishes3.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div ngClass="title4 overflow-text">Nom plat</div>
+      <div ngClass="title3 overflow-text">5$</div>
+    </mat-card-content>
+     <mat-card-actions fxFlexAlign="end">
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
 
 </div>

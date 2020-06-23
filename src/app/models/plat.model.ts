@@ -1,6 +1,6 @@
 import { User } from './user.model';
 
-export interface Plat {
+export class Plat {
    id: number;
    user: User;
    title: string;
@@ -13,18 +13,18 @@ export interface Plat {
    keywords: string[];
   }
 
-export interface Image {
+export class Image {
     id: number;
     name: string;
    }
 
-export interface PlatDate {
+export class PlatDate {
     plat: Plat;
     date: Date ;
 
    }
 
-export interface Reservation {
+export class Reservation {
     platdate: PlatDate;
     isAccepted: boolean;
     comment: string;

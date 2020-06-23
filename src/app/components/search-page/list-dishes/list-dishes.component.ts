@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { OrderDishComponent } from './order-dish/order-dish.component';
+import { Plat } from 'src/app/models/plat.model';
 
 @Component({
   selector: 'app-list-dishes',
@@ -10,17 +11,19 @@ import { OrderDishComponent } from './order-dish/order-dish.component';
 })
 export class ListDishesComponent implements OnInit {
 
+  @Input() dishes: Plat[];
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  OrderDis(): void {
+  OrderDis(plat): void {
     const dialogRef = this.dialog.open(OrderDishComponent, {
     hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
-      //data: {id: _id}
+      maxHeight: '800px',
+      data: plat
     });
 
     dialogRef.afterClosed().subscribe(result => {

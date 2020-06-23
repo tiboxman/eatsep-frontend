@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './components/search-page/search-page.component';
@@ -57,7 +58,8 @@ import { DishService } from './services/dish-service';
     AppMaterialModule, // './app-material/app-material.module'
     MatDialogModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ],
   providers: [DishService],
   bootstrap: [AppComponent]

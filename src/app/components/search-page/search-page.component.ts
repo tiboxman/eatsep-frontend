@@ -1,3 +1,4 @@
+import { Plat } from './../../models/plat.model';
 import { DishService } from './../../services/dish-service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
+  dishes: Plat[];
+
   constructor(private dishService: DishService) {
-      this.dishService.getDishes().subscribe((res) => {
-        console.log(res);
-      })
+
    }
 
   ngOnInit(): void {
+    this.dishService.getDishes().subscribe((res) => {
+      console.log(res);
+      this.dishes = res;
+    })
   }
 
 
