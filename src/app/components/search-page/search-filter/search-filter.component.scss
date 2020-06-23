@@ -1,7 +1,19 @@
 @import '../../../../styles.scss';
 
+@media (min-width: 0px) {
+  .logoEatsep {
+    width: 200px;
+  }
+}
+
+@media (min-width: 700px) {
+  .logoEatsep {
+    width: 300px;
+  }
+}
 
 .icon-cat {
+    margin-top: 7px;
     width: 30px;
     height: 30px;
 }
@@ -11,6 +23,7 @@
   font-weight: bold;
   padding-top: 5px;
   font-size: 11px;
+  height: 100%;
 }
 
 .activelabel {
@@ -28,10 +41,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+  padding-top: 0px;
   max-width: 600px;
 }
 
 .profil-info {
+  padding-top: 50px;
   background-color: $color-primary;
   border-bottom-right-radius: 50px;
   justify-content: center;
