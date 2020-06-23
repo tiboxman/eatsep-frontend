@@ -15,12 +15,12 @@ export class ProfilePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog(): void {
+  openDialog(plat): void {
     const dialogRef = this.dialog.open(OrderInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
-      //data: {id: _id}
+      maxHeight: '800px',
+      data: plat
     });
 
     dialogRef.afterClosed().subscribe(result => {

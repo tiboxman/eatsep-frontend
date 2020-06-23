@@ -29,5 +29,4 @@ export class Reservation {
     isAccepted: boolean;
     comment: string;
     user: User;
-
    }
