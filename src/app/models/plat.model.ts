@@ -20,6 +20,7 @@ export class Image {
 
 export class PlatDate {
     dish: Plat;
+    isAccepted: boolean;
     date: Date ;
    }
 
