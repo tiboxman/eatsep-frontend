@@ -16,6 +16,6 @@
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Commandes :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card *ngFor="let item of ['', '', '']" (click)="openDialog(item)" ></app-dish-card>
+    <app-dish-card *ngFor="let item of reservations" [reservation]='item' (click)="openDialog(item)" ></app-dish-card>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { OrderDishComponent } from './order-dish/order-dish.component';
-import { Plat } from 'src/app/models/plat.model';
+import { Plat, PlatDate } from 'src/app/models/plat.model';
 
 @Component({
   selector: 'app-list-dishes',
@@ -11,7 +11,7 @@ import { Plat } from 'src/app/models/plat.model';
 })
 export class ListDishesComponent implements OnInit {
 
-  @Input() dishes: Plat[];
+  @Input() dishes: PlatDate[];
 
   constructor(public dialog: MatDialog) { }
 

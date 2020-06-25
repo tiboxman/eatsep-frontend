@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Reservation } from './../../../models/plat.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dish-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dish-card.component.scss']
 })
 export class DishCardComponent implements OnInit {
+
+  @Input() reservation: Reservation;
 
   constructor() { }
 

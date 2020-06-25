@@ -4,8 +4,8 @@
   <mat-card class="dish-card" *ngFor="let d of dishes" (click)='OrderDis(d)'>
     <img mat-card-image ngClass="dish-img" src="dish../../../../assets/example_dishes/dishes3.png" >
     <mat-card-content>
-      <div ngClass="title4 overflow-text">{{d.title}}</div>
-      <div ngClass="title3 overflow-text">{{d.prix}}€</div>
+      <div ngClass="title4 overflow-text">{{d.dish.title}}</div>
+      <div ngClass="title3 overflow-text">{{d.dish.prix}}€</div>
     </mat-card-content>
     <!-- <mat-card-actions fxFlexAlign="end">
       <button mat-button>LIKE</button>

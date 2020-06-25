@@ -1,4 +1,4 @@
-import { Plat } from './../../models/plat.model';
+import { Plat, PlatDate } from './../../models/plat.model';
 import { DishService } from './../../services/dish-service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  dishes: Plat[];
+  dishes: PlatDate[];
 
   constructor(private dishService: DishService) {
 

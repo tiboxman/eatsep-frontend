@@ -19,9 +19,8 @@ export class Image {
    }
 
 export class PlatDate {
-    plat: Plat;
+    dish: Plat;
     date: Date ;
-
    }
 
 export class Reservation {

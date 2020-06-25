@@ -1,4 +1,4 @@
-import { Plat } from './../models/plat.model';
+import { Plat, PlatDate, Reservation } from './../models/plat.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -10,10 +10,20 @@ import {map} from 'rxjs/operators';
 export class DishService {
   constructor(private http: HttpClient) { }
 
-  getDishes(): Observable<Plat[]> {
-    return this.http.get(environment.api + '/dishes').pipe(
+  getDishes(): Observable<PlatDate[]> {
+    return this.http.get(environment.api + '/dishDates').pipe(
       map(res  => {
-          return res['dishs'] as Plat[];
+          console.log(res);
+          return res['dishDates'] as PlatDate[];
+      }));
+      // .map(res => res.json());
+  }
+
+  getReservations(): Observable<Reservation[]> {
+    return this.http.get(environment.api + '/reservations').pipe(
+      map(res  => {
+          console.log(res);
+          return res['reservations'] as Reservation[];
       }));
       // .map(res => res.json());
   }
