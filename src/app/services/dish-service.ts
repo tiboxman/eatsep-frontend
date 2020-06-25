@@ -19,6 +19,15 @@ export class DishService {
       // .map(res => res.json());
   }
 
+  getD(): Observable<Plat[]> {
+    return this.http.get(environment.api + '/dish').pipe(
+      map(res  => {
+          console.log(res);
+          return res['dish'] as Plat[];
+      }));
+      // .map(res => res.json());
+  }
+
   getReservations(): Observable<Reservation[]> {
     return this.http.get(environment.api + '/reservations').pipe(
       map(res  => {

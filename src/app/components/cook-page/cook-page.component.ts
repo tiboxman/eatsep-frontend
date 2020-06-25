@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DishService } from './../../services/dish-service';
+import { Reservation, Plat } from './../../models/plat.model';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ValidateReservationComponent } from './validate-reservation/validate-reservation.component';
 import { CreateDishInfoComponent } from './create-dish-info/create-dish-info.component';
@@ -13,9 +15,20 @@ import { PlanDishComponent } from './plan-dish/plan-dish.component';
 })
 export class CookPageComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  reservations: Reservation[];
+  plats: Plat[];
+
+  constructor(public dialog: MatDialog, private dishService: DishService) { }
 
   ngOnInit(): void {
+    this.dishService.getReservations().subscribe((res) => {
+      console.log(res);
+      this.reservations = res;
+    })
+    this.dishService.getD().subscribe((res) => {
+      console.log(res);
+      this.plats = res;
+    })
   }
 
   validateReservation(): void {

@@ -17,20 +17,20 @@
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Commandes :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-validate-reservation-card (click)="validateReservation()"></app-validate-reservation-card>
+    <app-validate-reservation-card *ngFor="let item of reservations" (click)="validateReservation(item)"></app-validate-reservation-card>
   </div>
 </div>
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Plats planifiés :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="PlanDishInfo()" *ngFor="let item of ['', '', '']" ></app-dish-card>
+    <app-dish-card *ngFor="let item of reservations" (click)="PlanDishInfo(item)"></app-dish-card>
     <app-add-dish-card (click)="PlanDish()"></app-add-dish-card>
   </div>
 </div>
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Plats créés :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card (click)="createDishInfo()" *ngFor="let item of ['', '', '', '', '', '', '']" ></app-dish-card>
+    <app-dish-card *ngFor="let item of plats" (click)="createDishInfo(item)"></app-dish-card>
     <app-add-dish-card (click)="createDish()"></app-add-dish-card>
   </div>
 </div>
