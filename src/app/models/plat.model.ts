@@ -20,13 +20,13 @@ export class Image {
 
 export class PlatDate {
     dish: Plat;
-    isAccepted: boolean;
     date: Date ;
    }
 
 export class Reservation {
     dishDate: PlatDate;
     isAccepted: boolean;
+    location: string;
     comment: string;
     user: User;
    }

@@ -1,18 +1,18 @@
 <div ngClass="dialogue">
 <img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
 <div ngClass="title2">
-   {{data.title}}
+   {{data.dishDate.dish.title}}
 </div>
 <div ngClass="title3 details">
-   date : {{data.date}}
+   date : {{data.dishDate.date|date:"dd/MM/yyyy HH:mm"}}
    <br>
-   prix :  {{data.prix}}€
+   prix :  {{data.dishDate.dish.prix}}€
    <br>
-   lieux : NDC
+   lieux : {{data.location}}
    <br>
    état : {{getEtat()}}
    <br>
-   description : {{data.description}}
+   description : {{data.dishDate.dish.description}}
    <br>
    chef : {{data.user.firstname}} {{data.user.name}} ({{data.user.tel}})
 </div>
