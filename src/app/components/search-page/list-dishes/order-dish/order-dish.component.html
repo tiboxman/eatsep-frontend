@@ -1,21 +1,19 @@
 <div ngClass="dialogue">
 <img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
 <div ngClass="title2">
-   {{data.title}}
+   {{data.dish.title}}
 </div>
 <div ngClass="title3 details">
    <!-- date : {{data..date}}01/05/2021 13h -->
    <!-- <br> -->
-   prix : {{data.prix}}€
+   prix : {{data.dish.prix}}€
    <br>
-   lieux : ?
+   description : {{data.dish.description}}
    <br>
-   état : ?
+   lieu : {{data.location}}
    <br>
-   description : {{data.description}}
-   <br>
-   chef : {{data.user.firstname}} {{data.user.name}}
+   chef : {{data.dish.user.firstname}} {{data.dish.user.name}}
 </div>
-<button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-order">commander</button>
+<button  mat-flat-button (click)="order()" color="primary" ngClass="bt-order">commander</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>
 </div>

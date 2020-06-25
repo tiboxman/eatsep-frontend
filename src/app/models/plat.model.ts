@@ -21,12 +21,13 @@ export class Image {
 export class PlatDate {
     dish: Plat;
     date: Date ;
+    location: string;
+
    }
 
 export class Reservation {
     dishDate: PlatDate;
     isAccepted: boolean;
-    location: string;
     comment: string;
     user: User;
    }

@@ -28,6 +28,11 @@ export class DishService {
       // .map(res => res.json());
   }
 
+  createDishDate(dishDate, userId) {
+    return this.http.post(environment.api + '/reservations', {'dishDate': dishDate.id , 'user': userId, "isAccepted": false})
+      // .map(res => res.json());
+  }
+
   createDish(dish) {
     return this.http.post(environment.api + '/dishes', dish)
       // .map(res => res.json());

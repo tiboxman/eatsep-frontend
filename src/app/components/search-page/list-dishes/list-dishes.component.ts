@@ -27,7 +27,9 @@ export class ListDishesComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log('ordered');
+    }, err => {
+      console.log('closed')
     });
   }
 
