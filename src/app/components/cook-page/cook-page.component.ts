@@ -31,12 +31,12 @@ export class CookPageComponent implements OnInit {
     })
   }
 
-  validateReservation(): void {
+  validateReservation(reservation) {
     const dialogRef = this.dialog.open(ValidateReservationComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
-      //data: {id: _id}
+      maxHeight: '800px',
+      data: reservation
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -44,12 +44,12 @@ export class CookPageComponent implements OnInit {
     });
   }
 
-  createDishInfo(): void {
+  createDishInfo(plat) {
     const dialogRef = this.dialog.open(CreateDishInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
-      //data: {id: _id}
+      maxHeight: '800px',
+      data: plat
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -57,12 +57,11 @@ export class CookPageComponent implements OnInit {
     });
   }
 
-  createDish(): void {
+  createDish() {
     const dialogRef = this.dialog.open(CreateDishComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
       maxHeight: '800px'
-      //data: {id: _id}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -70,12 +69,12 @@ export class CookPageComponent implements OnInit {
     });
   }
 
-  PlanDishInfo(): void {
+  PlanDishInfo(reservation) {
     const dialogRef = this.dialog.open(PlanDishInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
-      //data: {id: _id}
+      maxHeight: '800px',
+      data: reservation
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -88,7 +87,6 @@ export class CookPageComponent implements OnInit {
 	  hasBackdrop: true,
       maxWidth: '800px',
       maxHeight: '800px'
-      //data: {id: _id}
     });
 
     dialogRef.afterClosed().subscribe(result => {
