@@ -9,7 +9,7 @@ import { Plat } from 'src/app/models/plat.model';
   styleUrls: ['./order-info.component.scss']
 })
 export class OrderInfoComponent implements OnInit {
-
+  etat = "en attente";
   constructor(
     public dialogRef: MatDialogRef<OrderDishComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Plat) {}
@@ -21,5 +21,13 @@ export class OrderInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getEtat() {
+    if(this.data.isAccepted = true){
+      return "accepté";
+    }
+    else {
+      return "en attente";
+    }
+  }
 
 }

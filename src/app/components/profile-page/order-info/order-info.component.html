@@ -4,18 +4,21 @@
    {{data.title}}
 </div>
 <div ngClass="title3 details">
-   date : 01/05/2021 13h
+   date : {{data.date}}
    <br>
    prix :  {{data.prix}}€
    <br>
    lieux : NDC
    <br>
-   état : accepté
+   état : {{getEtat()}}
    <br>
    description : {{data.description}}
    <br>
-   chef : {{data.user.firstname}} {{data.user.name}}}
+   chef : {{data.user.firstname}} {{data.user.name}} ({{data.user.tel}})
 </div>
+<button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>
+<!--
 <button  mat-flat-button mat-dialog-close color="warn" ngClass="bt-annuler">annuler</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>
+-->
 </div>
