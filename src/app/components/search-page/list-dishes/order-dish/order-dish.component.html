@@ -13,7 +13,11 @@
    lieu : {{data.location}}
    <br>
    chef : {{data.dish.user.firstname}} {{data.dish.user.name}}
+   <!-- <input matInput (onChange)="changeComment($event)"
+           type="text"
+           placeholder="Commentaire"> -->
 </div>
+
 <button  mat-flat-button (click)="order()" color="primary" ngClass="bt-order">commander</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>
 </div>

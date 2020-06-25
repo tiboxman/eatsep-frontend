@@ -12,6 +12,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class OrderDishComponent implements OnInit {
 
+  public comment = '';
 
   constructor(
     public dialogRef: MatDialogRef<OrderDishComponent>,
@@ -21,8 +22,12 @@ export class OrderDishComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  changeComment(event) {
+    console.log(event);
+  }
+
   order() {
-    this.dishService.createDishDate(this.data, '5ef4a88e8da92159b09876f8').subscribe(res => {
+    this.dishService.createDishDate(this.data, '5ef4a88e8da92159b09876f8', "coucou").subscribe(res => {
       console.log(res);
       this.dialogRef.close();
     });

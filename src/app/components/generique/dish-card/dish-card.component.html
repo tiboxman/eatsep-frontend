@@ -1,4 +1,4 @@
-<div ngClass="dish-card">
+<div ngClass="dish-card" *ngIf="reservation != undefined" >
  <img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
 
   <div style="height: 1px;">
@@ -10,3 +10,16 @@
     {{reservation.dishDate.dish.title}}
   </div>
 </div>
+
+<div ngClass="dish-card" *ngIf="plat != undefined">
+  <img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
+
+   <div style="height: 1px;">
+   </div>
+   <div ngClass="dish-price overflow-text">
+     {{plat.prix}}€
+   </div>
+   <div ngClass="dish-name overflow-text">
+     {{plat.title}}
+   </div>
+ </div>

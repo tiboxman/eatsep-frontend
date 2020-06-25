@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Reservation } from './../../../models/plat.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-validate-reservation-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./validate-reservation-card.component.scss']
 })
 export class ValidateReservationCardComponent implements OnInit {
+
+  @Input() reservation: Reservation;
 
   constructor() { }
 

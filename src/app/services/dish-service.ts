@@ -20,10 +20,10 @@ export class DishService {
   }
 
   getD(): Observable<Plat[]> {
-    return this.http.get(environment.api + '/dish').pipe(
+    return this.http.get(environment.api + '/dishes').pipe(
       map(res  => {
           console.log(res);
-          return res['dish'] as Plat[];
+          return res['dishes'] as Plat[];
       }));
       // .map(res => res.json());
   }
@@ -37,8 +37,8 @@ export class DishService {
       // .map(res => res.json());
   }
 
-  createDishDate(dishDate, userId) {
-    return this.http.post(environment.api + '/reservations', {'dishDate': dishDate.id , 'user': userId, "isAccepted": false})
+  createDishDate(dishDate, userId, comment) {
+    return this.http.post(environment.api + '/reservations', {'dishDate': dishDate.id , 'user': userId, "comment": comment, "isAccepted": false})
       // .map(res => res.json());
   }
 

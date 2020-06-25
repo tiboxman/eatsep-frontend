@@ -1,4 +1,4 @@
-import { Reservation } from './../../../models/plat.model';
+import { Reservation, Plat } from './../../../models/plat.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,9 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DishCardComponent implements OnInit {
 
+  @Input() plat: Plat;
   @Input() reservation: Reservation;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
