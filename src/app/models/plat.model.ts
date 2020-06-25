@@ -24,7 +24,7 @@ export class PlatDate {
    }
 
 export class Reservation {
-    platdate: PlatDate;
+    dishDate: PlatDate;
     isAccepted: boolean;
     comment: string;
     user: User;
