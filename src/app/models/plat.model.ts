@@ -6,7 +6,7 @@ export class Plat {
    title: string;
    description: string;
    ingredients: string;
-   categorie: string[];
+   categories: string[];
    prix: number;
    images: string;
    mark: number;

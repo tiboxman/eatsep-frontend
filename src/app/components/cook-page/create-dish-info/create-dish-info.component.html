@@ -1,12 +1,12 @@
 <div ngClass="dialogue">
-<img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
+<img ngClass="cropped-img" src={{this.imagePath}}/>
 <div ngClass="title2">
-   nom plat
+   {{data.title}}
 </div>
 <div ngClass="title3 details">
-   catégories : blablabla blabla blablalba blabla blablalba
+   catégories : {{data.categories}}
    <br>
-   description : blablabla blabla blablalba blabla blablalba
+   description :{{data.description}}
 </div>
 <button  mat-flat-button mat-dialog-close color="warn" ngClass="bt-annuler">supprimer</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>

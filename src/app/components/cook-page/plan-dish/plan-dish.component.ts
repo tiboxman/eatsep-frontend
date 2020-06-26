@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { DishService } from './../../../services/dish-service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { CreateDishInfoComponent } from '../create-dish-info/create-dish-info.component';
+import { Plat } from 'src/app/models/plat.model';
 
 @Component({
   selector: 'app-plan-dish',
@@ -7,7 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanDishComponent implements OnInit {
 
-  constructor() { }
+  plats = [];
+
+  constructor(
+    public dialogRef: MatDialogRef<CreateDishInfoComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Plat[]) {
+      console.log(data)
+      this.plats = data;
+    }
 
   ngOnInit(): void {
   }

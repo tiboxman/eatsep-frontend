@@ -86,7 +86,8 @@ export class CookPageComponent implements OnInit {
     const dialogRef = this.dialog.open(PlanDishComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
-      maxHeight: '800px'
+      maxHeight: '800px',
+      data: this.plats
     });
 
     dialogRef.afterClosed().subscribe(result => {
