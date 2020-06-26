@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './components/search-page/search-page.component';
@@ -28,6 +30,8 @@ import { ValidateReservationComponent } from './components/cook-page/validate-re
 import { OrderDishComponent } from './components/search-page/list-dishes/order-dish/order-dish.component';
 
 import { DishService } from './services/dish-service';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -59,7 +63,12 @@ import { DishService } from './services/dish-service';
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [DishService],
   bootstrap: [AppComponent]

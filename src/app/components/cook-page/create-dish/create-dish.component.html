@@ -1,11 +1,12 @@
 <p ngClass="title2">Créer un plat</p>
-<label for="file" ngClass="camera-card">
+<label for="dish" ngClass="camera-card">
 <div ngClass="camera-card">
   <img ngClass="icon-camera" src="../assets/photo_camera.png"/>
 </div>
 </label>
 
-<input id="file" class="input-file" type="file">
+<input id="dish" class="input-file" name="dish" type="file" (change)="changeImage($event)">
+
 <div ngClass="dispatcher-around container-cat">
   <div ngClass="categorie" *ngFor="let cat of categories" (click)="this.toggleIcon(cat)">
     <img *ngIf="cat.isActive" ngClass="icon-cat" src="{{cat.srcUrlTrue}}">
@@ -14,17 +15,20 @@
   </div>
 
 </div>
-
+<mat-form-field appearance="outline" ngClass="ingredients">
+  <mat-label>Titre</mat-label>
+    <textarea matInput [(ngModel)]='newDish.title'></textarea>
+</mat-form-field>
 
 <mat-form-field appearance="outline" ngClass="input">
   <mat-label>prix</mat-label>
-  <input matInput>
+  <input matInput [(ngModel)]='newDish.prix'>
   <mat-icon matSuffix>euro_symbol</mat-icon>
 </mat-form-field>
 
 <mat-form-field appearance="outline" ngClass="ingredients">
   <mat-label>description</mat-label>
-  <textarea matInput></textarea>
+    <textarea matInput [(ngModel)]='newDish.description'></textarea>
 </mat-form-field>
 <button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-enregistrer" (click)='saveDish()'>enregistrer</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>

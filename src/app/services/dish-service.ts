@@ -1,5 +1,5 @@
 import { Plat, PlatDate, Reservation } from './../models/plat.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
@@ -42,14 +42,30 @@ export class DishService {
       // .map(res => res.json());
   }
 
-  createDish(dish) {
-    return this.http.post(environment.api + '/dishes', dish)
-      // .map(res => res.json());
-  }
+  // createDish(dish) {
+  //   return this.http.post(environment.api + '/dishes', dish)
+  //     // .map(res => res.json());
+  // }
 
   updateDish(todo) {
     return this.http.put(environment.api + '/dishes', todo)
       // .map(res => res.json());
+  }
+
+  uploadDish(file: File, dish: Plat): Observable<HttpEvent<any>> {
+    const dishUploadUrl = environment.api + '/dishes';
+    const formData = new FormData();
+    // formData.append('document', JSON.stringify(document));
+    formData.append('file', file);
+    formData.append('dish', JSON.stringify(dish));
+    // document.fileData = formData;
+    const httpOptions = {
+      // headers: new HttpHeaders({'Content-Type': 'multipart/form-data'}),
+      // body: {document: formData }
+    };
+
+    const req = new HttpRequest('POST', dishUploadUrl, formData, httpOptions);
+    return this.http.request(req);
   }
 
   deleteDish(todo) {

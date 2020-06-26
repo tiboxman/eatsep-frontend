@@ -1,7 +1,8 @@
 import { Plat } from './../../../models/plat.model';
 import { DishService } from './../../../services/dish-service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CATEGORIES } from '../../../models/mock/categorie.mock';
+import { newArray } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-create-dish',
@@ -10,11 +11,14 @@ import { CATEGORIES } from '../../../models/mock/categorie.mock';
 })
 export class CreateDishComponent implements OnInit {
   allcat: boolean = false;
-
+  newDish;
+  file: File;
   categories = CATEGORIES;
   constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
+    this.newDish = new Plat();
+    this.newDish.user = "5ef21913ea8df9691c95c325";
   }
 
   toggleIcon(cat: any) {
@@ -29,18 +33,14 @@ export class CreateDishComponent implements OnInit {
     }
   }
 
+  changeImage(event) {
+    // console.log(event.target);
+    this.file = event.target.files[0];
+    console.log(this.file);
+  }
+
   saveDish() {
-    const dish = {
-      "title": "APITEST",
-      "description": "test descr",
-      "images": [],
-      "ingredients": "test",
-      "keywords": ["test1", "test2"],
-      "categories": ["test1", "test2"],
-      "user": "5ede46f561cccf17cc0afa8f",
-      "prix": 10
-    };
-    this.dishService.createDish(dish).subscribe(res => {
+       this.dishService.uploadDish(this.file, this.newDish).subscribe(res => {
       console.log(res);
     })
   }

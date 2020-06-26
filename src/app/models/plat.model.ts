@@ -8,7 +8,7 @@ export class Plat {
    ingredients: string;
    categorie: string[];
    prix: number;
-   images: Image[];
+   images: string;
    mark: number;
    keywords: string[];
   }
