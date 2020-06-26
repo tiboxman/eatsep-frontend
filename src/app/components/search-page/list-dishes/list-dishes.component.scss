@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 .dish-card {
   width: 100%;
   max-width: 250px;
@@ -25,4 +27,25 @@
 .dish-img {
   // width: 100%;
   // height: 70%;
+}
+
+
+.date-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.date-arrow {
+  width: 20px;
+  height: 20px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
 }

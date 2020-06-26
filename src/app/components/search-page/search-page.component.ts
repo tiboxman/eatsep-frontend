@@ -1,6 +1,7 @@
 import { Plat, PlatDate } from './../../models/plat.model';
 import { DishService } from './../../services/dish-service';
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-search-page',
@@ -10,17 +11,21 @@ import { Component, OnInit } from '@angular/core';
 export class SearchPageComponent implements OnInit {
 
   dishes: PlatDate[];
+  currentDate;
+  dateEvent: BehaviorSubject<Date>;
 
   constructor(private dishService: DishService) {
+
 
    }
 
   ngOnInit(): void {
     this.dishService.getDishes().subscribe((res) => {
-      console.log(res);
       this.dishes = res;
+      console.log(this.dishes);
     })
   }
+
 
 
 }

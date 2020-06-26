@@ -22,7 +22,7 @@ export class OrderInfoComponent implements OnInit {
   }
 
   getEtat() {
-    if(this.data.isAccepted = true){
+    if(this.data.isAccepted){
       return "accepté";
     }
     else {

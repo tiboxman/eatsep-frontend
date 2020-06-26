@@ -17,7 +17,8 @@ export class DishCardComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.imagePath = 'http://127.0.0.1:8887/' + this.plat.images ;
+    if (this.plat != undefined)
+      this.imagePath = 'http://127.0.0.1:8887/' + this.plat.images ;
   }
    getImageUrl() {
      return  this.sanitization.bypassSecurityTrustStyle(`url(${this.imagePath})`);

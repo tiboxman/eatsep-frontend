@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material';
+import { PlatDate } from 'src/app/models/plat.model';
+import { DishService } from 'src/app/services/dish-service';
 
 @Component({
   selector: 'app-plan-dish-info',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanDishInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor( @Inject(MAT_DIALOG_DATA) public data: PlatDate, private dishService: DishService) { }
 
   ngOnInit(): void {
   }

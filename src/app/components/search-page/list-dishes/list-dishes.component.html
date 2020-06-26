@@ -1,8 +1,17 @@
-
+<div>
+<div ngClass="date-picker-container">
+  <div ngClass="date-arrow" (click)="previousDate()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </div>
+  <div ngClass="title2 date-label">{{getDate()}}</div>
+  <div ngClass="date-arrow" (click)="nextDate()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+</div>
 <div  class="dish-list">
 
   <mat-card class="dish-card" *ngFor="let d of dishes" (click)='OrderDis(d)'>
-    <img mat-card-image ngClass="dish-img" src="dish../../../../assets/example_dishes/dishes3.png" >
+    <img mat-card-image ngClass="dish-img" src="{{'http://127.0.0.1:8887/' + d.dish.images}}">
     <mat-card-content>
       <div ngClass="title4 overflow-text">{{d.dish.title}}</div>
       <div ngClass="title3 overflow-text">{{d.dish.prix}}€</div>

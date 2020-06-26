@@ -26,6 +26,7 @@ export class PlatDate {
    }
 
 export class Reservation {
+    id: number;
     dishDate: PlatDate;
     isAccepted: boolean;
     comment: string;

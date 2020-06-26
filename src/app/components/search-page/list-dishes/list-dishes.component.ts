@@ -12,10 +12,17 @@ import { Plat, PlatDate } from 'src/app/models/plat.model';
 export class ListDishesComponent implements OnInit {
 
   @Input() dishes: PlatDate[];
+  filteredDishes: PlatDate[] = [];
+  currentDate = new Date();
+  days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+  month = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+   }
 
   ngOnInit(): void {
+    // this.filteredDishes = this.dishes.filter(x => x.date === this.currentDate);
+    console.log(this.dishes);
   }
 
   OrderDis(plat): void {
@@ -32,5 +39,31 @@ export class ListDishesComponent implements OnInit {
       console.log('closed')
     });
   }
+
+
+  nextDate() {
+    if (this.currentDate.getDay() + 1 === 5) {
+      this.currentDate.setDate(this.currentDate.getDate() + 3);
+    } else  {
+      this.currentDate.setDate(this.currentDate.getDate() + 1);
+    }
+  }
+
+  previousDate() {
+    if (this.currentDate.getDay() - 1 === -1) {
+      this.currentDate.setDate(this.currentDate.getDate() - 3);
+    } else  {
+      this.currentDate.setDate(this.currentDate.getDate() - 1);
+
+    }
+
+  }
+
+  getDate() {
+    let str = '';
+    str += this.days[this.currentDate.getDay()] + ' ' + this.currentDate.getDate() + ' ' + this.month[this.currentDate.getMonth()];
+    return str;
+  }
+
 
 }

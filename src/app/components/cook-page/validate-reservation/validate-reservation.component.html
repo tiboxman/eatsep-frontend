@@ -3,16 +3,16 @@
     <mat-icon ngClass="icon title3">person</mat-icon>
   </div>
 <div ngClass="title2">
-   Adrien LAMBEL
+   {{data.user.firstname}} {{data.user.name}}
 </div>
 <div ngClass="title3 details">
-   nom plat : nom plat
+   nom plat : {{data.dishDate.dish.title}}
    <br>
-   date : 01/05/2021 13h
+   date : {{data.dishDate.date |date:"dd/MM/yyyy HH:mm"}}
    <br>
-   lieux : NDC
+   lieux : {{data.dishDate.location}}
    <br>
-   prix : 5$
+   prix : {{data.dishDate.dish.prix}}$
 </div>
 
 <button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-enregistrer" (click)='saveDish()'>valider</button>

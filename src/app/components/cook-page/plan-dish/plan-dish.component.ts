@@ -1,3 +1,4 @@
+import { PlatDate } from './../../../models/plat.model';
 import { DishService } from './../../../services/dish-service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
@@ -11,16 +12,52 @@ import { Plat } from 'src/app/models/plat.model';
 })
 export class PlanDishComponent implements OnInit {
 
-  plats = [];
+  plats: Plat[] = [];
+
+  date: Date;
+  location;
+  currentPlat;
 
   constructor(
     public dialogRef: MatDialogRef<CreateDishInfoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Plat[]) {
-      console.log(data)
-      this.plats = data;
+    private dishService: DishService) {
+
     }
 
   ngOnInit(): void {
+    this.dishService.getD().subscribe(res => {
+          this.plats = res;
+    })
+  }
+
+  changeLocation(location) {
+    this.location = location;
+  }
+
+  changeDete(date) {
+    this.date = date;
+  }
+
+  changePlat(plat) {
+    this.currentPlat = plat;
+    console.log(plat);
+  }
+
+  onChangeDish(value) {
+    this.currentPlat = value;
+    console.log(value);
+  }
+
+  onChange(value) {
+    console.log(value);
+    this.location = value;
+  }
+
+  save() {
+    console.log(this.currentPlat);
+    this.dishService.createNewDishDate(this.date, this.currentPlat, this.location ).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

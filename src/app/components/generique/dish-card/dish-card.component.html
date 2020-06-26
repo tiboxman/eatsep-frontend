@@ -1,5 +1,5 @@
 <div ngClass="dish-card" *ngIf="reservation != undefined" >
- <img ngClass="cropped-img" src="../assets/example_dishes/dishes4.png"/>
+ <img ngClass="cropped-img" src="{{'http://127.0.0.1:8887/' + reservation.dishDate.dish.images}}"/>
 
   <div style="height: 1px;">
   </div>
@@ -9,6 +9,8 @@
   <div ngClass="dish-name overflow-text">
     {{reservation.dishDate.dish.title}}
   </div>
+  <!-- <div *ngIf="reservation.isAccepted" >Acceptée</div>
+  <div *ngIf="!reservation.isAccepted">En attente</div> -->
 </div>
 
 <div ngClass="dish-card" *ngIf="plat != undefined">

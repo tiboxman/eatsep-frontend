@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from './../../services/dish-service';
-import { Reservation, Plat } from './../../models/plat.model';
+import { Reservation, Plat, PlatDate } from './../../models/plat.model';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ValidateReservationComponent } from './validate-reservation/validate-reservation.component';
 import { CreateDishInfoComponent } from './create-dish-info/create-dish-info.component';
@@ -17,6 +17,7 @@ export class CookPageComponent implements OnInit {
 
   reservations: Reservation[];
   plats: Plat[];
+  dishDates: PlatDate[];
 
   constructor(public dialog: MatDialog, private dishService: DishService) { }
 
@@ -28,6 +29,10 @@ export class CookPageComponent implements OnInit {
     this.dishService.getD().subscribe((res) => {
       console.log(res);
       this.plats = res;
+    });
+    this.dishService.getDisheDates().subscribe((res) => {
+      console.log(res);
+      this.dishDates = res;
     })
   }
 
@@ -69,12 +74,12 @@ export class CookPageComponent implements OnInit {
     });
   }
 
-  PlanDishInfo(reservation) {
+  PlanDishInfo(dishDate) {
     const dialogRef = this.dialog.open(PlanDishInfoComponent, {
 	  hasBackdrop: true,
       maxWidth: '800px',
       maxHeight: '800px',
-      data: reservation
+      data: dishDate
     });
 
     dialogRef.afterClosed().subscribe(result => {

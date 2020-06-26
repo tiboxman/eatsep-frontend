@@ -2,14 +2,23 @@
 
 <div ngClass="column" ngClass="input-container">
 
-<mat-form-field appearance="outline" ngClass="input">
-  <mat-label >plat</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let item of plats"  value="option">{{item.title}}</mat-option>
-  </mat-select>
-  <mat-icon matSuffix>restaurant</mat-icon>
-</mat-form-field>
+<!-- <mat-form-field appearance="outline" ngClass="input">
 
+</mat-form-field> -->
+
+  <mat-label >plat</mat-label>
+  <select  (change)="onChangeDish($event.target.value)">
+    <option *ngFor="let item of plats"  (click)="changePlat(item)" value ={{item.id}}>{{item.title}}</option>
+  </select>
+  <!-- <mat-icon matSuffix>restaurant</mat-icon> -->
+  <mat-label >lieu</mat-label>
+  <select (change)="onChange($event.target.value)">
+    <option>NDL</option>
+    <option>NDC</option>
+  </select>
+
+
+<!--
 <mat-form-field appearance="outline" ngClass="input">
   <mat-label>lieux</mat-label>
   <mat-select>
@@ -18,20 +27,13 @@
   </mat-select>
   <mat-icon matSuffix>place</mat-icon>
 </mat-form-field>
-<!--
-<mat-form-field appearance="outline">
-  <mat-label>date</mat-label>
-  <input matInput [matDatepicker]="picker"  type="datetime-local">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
 -->
 <mat-form-field appearance="outline" ngClass="input">
   <mat-label>date / heure</mat-label>
-  <input matInput type="datetime-local">
+  <input matInput type="datetime-local" [(ngModel)]="date">
 </mat-form-field>
 
 </div>
 
-<button  mat-flat-button mat-dialog-close color="primary" ngClass="bt-enregistrer">enregistrer</button>
+<button  mat-flat-button mat-dialog-close color="primary" (click)="save()" ngClass="bt-enregistrer">enregistrer</button>
 <button  mat-raised-button mat-dialog-close color="" ngClass="bt-return">retour</button>

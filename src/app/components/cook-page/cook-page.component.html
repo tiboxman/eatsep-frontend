@@ -23,7 +23,7 @@
 <div ngClass="container">
   <div ngClass="title2 labelOrder">Plats planifiés :</div>
   <div ngClass="title3  dispatcher-left">
-    <app-dish-card *ngFor="let item of reservations" [reservation]="item" (click)="PlanDishInfo(item)"></app-dish-card>
+    <app-dish-card *ngFor="let item of dishDates" [plat]="item.dish" (click)="PlanDishInfo(item)"></app-dish-card>
     <app-add-dish-card (click)="PlanDish()"></app-add-dish-card>
   </div>
 </div>

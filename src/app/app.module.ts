@@ -9,6 +9,7 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -32,6 +33,7 @@ import { OrderDishComponent } from './components/search-page/list-dishes/order-d
 import { DishService } from './services/dish-service';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule, MatToolbarModule, MatCardModule, MatIconModule } from '@angular/material';
 
 
 
@@ -59,16 +61,21 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule, // './app-material/app-material.module'
+    // AppMaterialModule, // './app-material/app-material.module'
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
     MatTabsModule,
     MatFormFieldModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
+
+
   ],
   providers: [DishService],
   bootstrap: [AppComponent]

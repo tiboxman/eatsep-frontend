@@ -25,7 +25,6 @@ export class DishService {
           console.log(res);
           return res['dishes'] as Plat[];
       }));
-      // .map(res => res.json());
   }
 
   getReservations(): Observable<Reservation[]> {
@@ -37,18 +36,30 @@ export class DishService {
       // .map(res => res.json());
   }
 
+  getDisheDates():  Observable<PlatDate[]>  {
+    return this.http.get(environment.api + '/dishDates').pipe(
+      map(res  => {
+          console.log(res);
+          return res['dishDates'] as PlatDate[];
+      }));
+  }
+
   createDishDate(dishDate, userId, comment) {
     return this.http.post(environment.api + '/reservations', {'dishDate': dishDate.id , 'user': userId, "comment": comment, "isAccepted": false})
       // .map(res => res.json());
   }
 
+  createNewDishDate(date, dish, location) {
+    return this.http.post(environment.api + '/dishDates', {'date': date , 'dish': dish, "location": location})
+      // .map(res => res.json());
+  }
   // createDish(dish) {
   //   return this.http.post(environment.api + '/dishes', dish)
   //     // .map(res => res.json());
   // }
 
-  updateDish(todo) {
-    return this.http.put(environment.api + '/dishes', todo)
+  updateDishDate(resId) {
+    return this.http.put(environment.api + '/reservations', {"id": resId, "isAccepted": true})
       // .map(res => res.json());
   }
 

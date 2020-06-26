@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CATEGORIES } from '../../../models/mock/categorie.mock';
+import { EventEmitter } from 'protractor';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-search-filter',
@@ -10,10 +12,7 @@ export class SearchFilterComponent implements OnInit {
   allcat: boolean = false;
 
   categories = CATEGORIES;
-  currentDate = new Date();
 
-  days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
-  month = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
 
   constructor() { }
 
@@ -32,26 +31,5 @@ export class SearchFilterComponent implements OnInit {
     }
   }
 
-  nextDate() {
-    if (this.currentDate.getDay() + 1 === 5) {
-      this.currentDate.setDate(this.currentDate.getDate() + 3);
-    } else  {
-      this.currentDate.setDate(this.currentDate.getDate() + 1);
-    }
-  }
-
-  previousDate() {
-    if (this.currentDate.getDay() - 1 === -1) {
-      this.currentDate.setDate(this.currentDate.getDate() - 3);
-    } else  {
-      this.currentDate.setDate(this.currentDate.getDate() - 1);
-    }
-  }
-
-  getDate() {
-    let str = '';
-    str += this.days[this.currentDate.getDay()] + ' ' + this.currentDate.getDate() + ' ' + this.month[this.currentDate.getMonth()];
-    return str;
-  }
 
 }
